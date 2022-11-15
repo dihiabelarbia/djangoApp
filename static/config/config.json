@@ -1,0 +1,19 @@
+{
+  "scripts": [
+    {
+      "script_path": "D:\\scripts\\termes_2022\\launch_AIG.cmd",
+      "script_name": "TERMES AIG",
+      "script_image": "./static/config/python.jfif"
+    },
+    {
+      "script_path": "D:\\scripts\\termes_2022\\launch_ATTSCO.cmd",
+      "script_name": "TERMES Attestation Scolaires",
+      "script_image": "./static/config/python.jfif"
+    },
+    {
+      "script_path": "D:\\scripts\\termes_2022\\launch.cmd",
+      "script_name": "Impressions quotidiennes",
+      "script_image": "./static/config/python.jfif"
+    }
+  ]
+}

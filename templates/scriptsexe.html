@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Filtre</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/./static/style/style.css">
+    <link rel="icon" type="image/png" href="/./static/style/logo.png" />
+	<script type = "text/javaScript">
+	function runScript(path) {
+		executor.spawn([path]);
+		}
+	</script>
+		
+
+<h1 class ="h1center" >recherche <code>PDF</code></h1>
+<img class = "logo" src="/./static/images/logo_assurone_bloc_blanc.png" />
+
+</head>
+<body>
+
+
+<nav id="wrap">
+    <ul class="navbar">
+        <li><a href="/">Pydoc</a></li>
+        <li><a href="/logpaths">LogPaths</a></li>
+        <li><a href="/search">search PDF</a></li>
+        <li><a href="/tests">scripts test</a></li>
+    </ul>
+</nav>
+
+{% block content %}
+    <div style="width: 50%; margin: auto">
+        {% for item in data %}
+            <div class="list" style="padding: 10px; background-color: #EEE; margin: 20px">
+                <img style = "width: 60px; float: left;" src = "{{ item.script_image }}"/>
+                <a href= "{% url 'scripts_exec' path=item.script_path %}" > {{ item.script_name }}</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %} 
+{% csrf_token %}
+</body>
